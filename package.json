@@ -1,12 +1,12 @@
 {
   "name": "number-to-letter-js",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Number-To-Letter Kata",
   "main": "index.js",
   "scripts": {
     "test": "jest --watch ."
   },
-  "author": "",
+  "author": "Nicolas MOREAU",
   "license": "ISC",
   "devDependencies": {
     "jest": "^25.1.0"
