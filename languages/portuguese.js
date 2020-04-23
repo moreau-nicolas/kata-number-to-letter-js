@@ -15,9 +15,9 @@ function PORTUGUESE(number) {
     return resultOf(
         joinWith(' e ', [
             specialCase(0, 'zero'),
-            suffixPowerOfTen(PORTUGUESE, 9, ' bilhões', 'um bilhão'),
-            suffixPowerOfTen(PORTUGUESE, 6, ' milhões', 'um milhão'),
-            suffixPowerOfTen(PORTUGUESE, 3, ' mil', 'mil'),
+            suffixPowerOfTen(9, PORTUGUESE, ' bilhões', 'um bilhão'),
+            suffixPowerOfTen(6, PORTUGUESE, ' milhões', 'um milhão'),
+            suffixPowerOfTen(3, PORTUGUESE, ' mil', 'mil'),
             specialCase(100, 'cem'),
             literal(HUNDREDS, 100, 999, 100),
             literal(TWENTY_TO_NINETY, 20, 99, 10),

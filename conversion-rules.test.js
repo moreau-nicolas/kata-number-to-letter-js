@@ -279,7 +279,7 @@ describe('literal()', () => {
 describe('suffixPowerOfTen()', () => {
     describe('with an invariant suffix', () => {
         const ROMAN = x => [undefined, 'I', 'II', 'III', 'IV'][x];
-        const ruleUnderTest = suffixPowerOfTen(ROMAN, 2, '*C');
+        const ruleUnderTest = suffixPowerOfTen(2, ROMAN, '*C');
 
         it('should return an array containing ' +
             'the converted multiple with the suffix and ' +
@@ -300,7 +300,7 @@ describe('suffixPowerOfTen()', () => {
     });
     describe('with a pluralized suffix', () => {
         const FRENCH = x => [undefined, undefined, 'deux', 'trois', 'quatre'][x];
-        const ruleUnderTest = suffixPowerOfTen(FRENCH, 3, '-mille', 'mille');
+        const ruleUnderTest = suffixPowerOfTen(3, FRENCH, '-mille', 'mille');
 
         it('should return an array containing ' +
             'the singular and ' +

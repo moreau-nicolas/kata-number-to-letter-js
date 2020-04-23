@@ -15,9 +15,9 @@ function FRENCH(number) {
     return resultOf(
         joinWith('-', [
             specialCase(0, 'zéro'),
-            suffixPowerOfTen(FRENCH, 9, '-milliards', 'un-milliard'),
-            suffixPowerOfTen(FRENCH, 6, '-millions', 'un-million'),
-            suffixPowerOfTen(FRENCH_THOUSANDS, 3, '-mille', 'mille'),
+            suffixPowerOfTen(9, FRENCH, '-milliards', 'un-milliard'),
+            suffixPowerOfTen(6, FRENCH, '-millions', 'un-million'),
+            suffixPowerOfTen(3, FRENCH_THOUSANDS, '-mille', 'mille'),
             specialCase(900, 'neuf-cents'),
             specialCase(800, 'huit-cents'),
             specialCase(700, 'sept-cents'),
@@ -26,7 +26,7 @@ function FRENCH(number) {
             specialCase(400, 'quatre-cents'),
             specialCase(300, 'trois-cents'),
             specialCase(200, 'deux-cents'),
-            suffixPowerOfTen(FRENCH, 2, '-cent', 'cent'),
+            suffixPowerOfTen(2, FRENCH, '-cent', 'cent'),
             specialCase(80, 'quatre-vingts'),
             CONVERT_SMALLER_NUMBERS,
         ]))(number)
@@ -35,7 +35,7 @@ function FRENCH(number) {
 function FRENCH_THOUSANDS(number) {
     return resultOf(
         joinWith('-', [
-            suffixPowerOfTen(FRENCH_THOUSANDS, 2, '-cent', 'cent'),
+            suffixPowerOfTen(2, FRENCH_THOUSANDS, '-cent', 'cent'),
             CONVERT_SMALLER_NUMBERS,
         ]))(number)
 }

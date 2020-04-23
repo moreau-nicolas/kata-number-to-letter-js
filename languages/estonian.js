@@ -15,12 +15,12 @@ function ESTONIAN(number) {
     return resultOf(
         joinWith(' ',[
             specialCase(0, 'null'),
-            suffixPowerOfTen(ESTONIAN, 9, ' miljardit', 'miljard'),
-            suffixPowerOfTen(ESTONIAN, 6, ' miljonit', 'miljon'),
-            suffixPowerOfTen(ESTONIAN, 3, ' tuhat', 'tuhat'),
-            suffixPowerOfTen(ESTONIAN, 2, 'sada', 'sada'),
+            suffixPowerOfTen(9, ESTONIAN, ' miljardit', 'miljard'),
+            suffixPowerOfTen(6, ESTONIAN, ' miljonit', 'miljon'),
+            suffixPowerOfTen(3, ESTONIAN, ' tuhat', 'tuhat'),
+            suffixPowerOfTen(2, ESTONIAN, 'sada', 'sada'),
             literal(ELEVEN_TO_NINETEEN, 11, 19),
-            suffixPowerOfTen(ESTONIAN, 1, 'kümmend', 'kümme'),
+            suffixPowerOfTen(1, ESTONIAN, 'kümmend', 'kümme'),
             literal(ONE_TO_NINE, 1, 9)
         ]))(number)
 }

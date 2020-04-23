@@ -23,14 +23,14 @@ function ITALIAN(number) {
     return resultOf(
         joinWith(' ', [
             specialCase(0, 'zero'),
-            suffixPowerOfTen(ITALIAN, 9, ' miliardi', 'un miliarde'),
-            suffixPowerOfTen(ITALIAN, 6, ' milioni', 'un milione'),
+            suffixPowerOfTen(9, ITALIAN, ' miliardi', 'un miliarde'),
+            suffixPowerOfTen(6, ITALIAN, ' milioni', 'un milione'),
             joinWith('', [
                 joinWith('', [
-                    suffixPowerOfTen(ITALIAN, 3, 'mila', 'mille'),
+                    suffixPowerOfTen(3, ITALIAN, 'mila', 'mille'),
                     conditionalElement(' ', afterThreeSignificantThousandDigits),
                 ], lastToFirst),
-                suffixPowerOfTen(ITALIAN, 2, 'cento', 'cento'),
+                suffixPowerOfTen(2, ITALIAN, 'cento', 'cento'),
                 specialCase(3, 'tre'),
                 literal(TWENTY_TO_NINETY, 20, 99, 10),
                 literal(TEN_TO_NINETEEN, 10, 19),

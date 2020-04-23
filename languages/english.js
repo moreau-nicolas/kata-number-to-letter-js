@@ -15,10 +15,10 @@ function ENGLISH(number) {
     return resultOf(
         joinWith(' ', [
             specialCase(0, 'zero'),
-            suffixPowerOfTen(ENGLISH, 9, ' billion'),
-            suffixPowerOfTen(ENGLISH, 6, ' million'),
-            suffixPowerOfTen(ENGLISH, 3, ' thousand'),
-            suffixPowerOfTen(ENGLISH, 2, ' hundred'),
+            suffixPowerOfTen(9, ENGLISH, ' billion'),
+            suffixPowerOfTen(6, ENGLISH, ' million'),
+            suffixPowerOfTen(3, ENGLISH, ' thousand'),
+            suffixPowerOfTen(2, ENGLISH, ' hundred'),
             joinWith('-', [
                 literal(TWENTY_TO_NINETY, 20, 99, 10),
                 literal(ONE_TO_NINE, 1, 9),

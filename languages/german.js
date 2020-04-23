@@ -16,10 +16,10 @@ function GERMAN(number) {
     return resultOf(
         joinWith('', [
             specialCase(0, 'null'),
-            suffixPowerOfTen(GERMAN, 9, ' Milliarden', 'eine Milliarde'),
-            suffixPowerOfTen(GERMAN, 6, ' Millionen', 'eine Million'),
-            suffixPowerOfTen(GERMAN, 3, 'tausend', 'tausend'),
-            suffixPowerOfTen(GERMAN, 2, 'hundert', 'hundert'),
+            suffixPowerOfTen(9, GERMAN, ' Milliarden', 'eine Milliarde'),
+            suffixPowerOfTen(6, GERMAN, ' Millionen', 'eine Million'),
+            suffixPowerOfTen(3, GERMAN, 'tausend', 'tausend'),
+            suffixPowerOfTen(2, GERMAN, 'hundert', 'hundert'),
             specialCase(1, 'eins'),
             joinWith('und', [
                 literal(ONE_TO_NINE, 1, 9),

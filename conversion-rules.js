@@ -1,4 +1,4 @@
-const suffixPowerOfTen = (converter, power, suffix, singular) =>
+const suffixPowerOfTen = (power, converter, suffix, singular) =>
     (number) => {
         const POWER_OF_TEN = Math.pow(10, power);
         if (number >= POWER_OF_TEN) {

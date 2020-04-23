@@ -16,10 +16,10 @@ function DUTCH(number) {
     return resultOf(
         joinWith(' ', [
             specialCase(0, 'nul'),
-            suffixPowerOfTen(DUTCH, 9, ' miljard'),
-            suffixPowerOfTen(DUTCH, 6, ' miljoen'),
-            suffixPowerOfTen(DUTCH, 3, 'duizend', 'duizend'),
-            suffixPowerOfTen(DUTCH, 2, 'honderd', 'honderd'),
+            suffixPowerOfTen(9, DUTCH, ' miljard'),
+            suffixPowerOfTen(6, DUTCH, ' miljoen'),
+            suffixPowerOfTen(3, DUTCH, 'duizend', 'duizend'),
+            suffixPowerOfTen(2, DUTCH, 'honderd', 'honderd'),
             joinWith('en', [
                 literal(ONE_TO_NINE, 1, 9),
                 literal(TWENTY_TO_NINETY, 20, 99, 10),
