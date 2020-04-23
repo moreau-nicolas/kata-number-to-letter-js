@@ -15,7 +15,7 @@ const suffixPowerOfTen = (converter, power, suffix, singular) =>
 const literal = (fromArray, whenBetween, and, withInterval = 1) =>
     (number) => {
         if (number >= whenBetween && number <= and) {
-            const VALUES = Array.isArray(fromArray) ? fromArray : [fromArray];
+            const VALUES = fromArray;
             const STEP = withInterval;
             const INDEX = Math.trunc((number - whenBetween) / STEP) % VALUES.length;
             const NEXT = number - whenBetween - INDEX * STEP;
