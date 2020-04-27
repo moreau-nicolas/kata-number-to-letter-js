@@ -2,7 +2,7 @@ const {convertNumberToLetter} = require('../index');
 require('./portuguese');
 
 describe('Convert number to letter in Portuguese', () => {
-    const NUMBERS_UP_TO_SIXTEEN_ARE_SIMPLE_CONSTANTS = [
+    const NUMBERS_UP_TO_NINETEEN_ARE_SIMPLE_CONSTANTS = [
         [0, 'zero'],
         [1, 'um'],
         [2, 'dois'],
@@ -82,7 +82,7 @@ describe('Convert number to letter in Portuguese', () => {
         [4000000000, 'quatro bilhões'],
     ];
     const PORTUGUESE_EXAMPLES = [
-        ...NUMBERS_UP_TO_SIXTEEN_ARE_SIMPLE_CONSTANTS,
+        ...NUMBERS_UP_TO_NINETEEN_ARE_SIMPLE_CONSTANTS,
         ...NUMBERS_HAVE_A_WORD_AND_SPACES_BETWEEN_WORDS,
         ...ONE_IS_OMITTED_BEFORE_ONE_HUNDRED_AND_ONE_THOUSAND,
         ...HUNDREDS_ARE_PLURALIZED,
